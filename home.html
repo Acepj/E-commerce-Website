@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <title>E-commerce</title>
+
+</head>
+<body>
+   
+
+<header>
+
+  <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('active')">
+  &#9776; <!-- hamburger icon -->
+</div>
+
+  <button onclick="goBackToLogin()" class="back-btn">← Back to Login</button>
+
+<div class="logo">
+    <img src="/images/logo.png" alt="logo">
+    <h1>D'Source Bookstore</h1>
+    <div class="Search">
+    <input type="text" id="searchInput" placeholder="Search for books, authors, genres...">
+    <button type="submit" onclick="searchBooks()">
+        <i class="fas fa-search"></i>
+    </button>
+</div>
+
+<div id="searchResults"></div>
+
+
+    <div class="cart">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart">
+                <span class="cart-count">0</span>
+            </i>
+        </div>
+    </div>
+
+
+
+<nav class="nav-bar">
+      <ul id="nav-links">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#shop">shop</a></li>
+        <li><a href="#new-arrival">new arrival</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+</nav>
+
+<section id="home" data-aos="fade-up" class="container-hero">
+    <div class="hero">
+        <h2>Welcome to D'Source Bookstore</h2>
+        <p>Your one stop destination to all your reading needs</p>
+    </div>
+</section>
+
+
+        <section id="about"  data-aos="fade-up"  class="about-section">
+          <div class="about-container">
+
+            <div class="about-left" data-aos="fade-up">
+                <h2>About us </h2>
+          </div>
+  
+      <div class="about-right" data-aos="fade-up">
+        <p>Welcome to D'Source Bookstore, we believe that books have the power to awaken the soul, expand the mind, and offer comfort through life’s deepest questions. Our collection is thoughtfully curated to guide readers on a journey through the mysteries of life, death, and the soul’s evolution.
+          Founded by seekers for seekers, our mission is to create a sacred space for discovery whether you're exploring the meaning of existence, grieving a loss, or simply curious about the metaphysical. Each book we offer is a stepping stone on the path to greater self-awareness, healing, and spiritual insight.
+          We are more than just a bookstore. We are a community of readers, thinkers, and soul travelers committed to exploring what lies beyond the physical and within the heart. Welcome to a place where words heal, inspire, and transcend. D'Source Bookstore Books that speak to the soul.</p>
+      </div>
+          </div>
+        </section>
+
+    <section id="shop" data-aos="fade-up">
+            <h2>Shop</h2>
+            <p>Explore our wide range of books</p>
+
+<div class="book-grid">
+  <div class="book-item" data-title="Book Title 1" data-price="99.9">
+    <div class="book-image" style="background-image: url(/books/book1.jpg);"></div>
+    <div class="book-info">
+      <h3>The Book of Life</h3>
+      <p>Author: Dr. Rajan Pandey</p>
+      <p>Price: $99.9</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Book Title 2" data-price="80">
+    <div class="book-image" style="background-image: url(/books/book2.jpg);"></div>
+    <div class="book-info">
+      <h3>Build The Life You Want</h3>
+      <p>Author: Arthur C. Brooks</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Book Title 3" data-price="80">
+    <div class="book-image" style="background-image: url(/books/book3.jpg);"></div>
+    <div class="book-info">
+      <h3>The Power of Now</h3>
+      <p>Author: Echkart Tolle</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Soul 1" data-price="99.9">
+    <div class="book-image" style="background-image: url(/books/soul1.jpg);"></div>
+    <div class="book-info">
+      <h3>The Soul</h3>
+      <p>Author: Paul Ham</p>
+      <p>Price: $99.9</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Soul 2" data-price="80">
+    <div class="book-image" style="background-image: url(/books/soul2.jpg);"></div>
+    <div class="book-info">
+      <h3>The Books of Soul</h3>
+      <p>Author: Mark Nepo</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Soul 3" data-price="80">
+    <div class="book-image" style="background-image: url(/books/soul3.jpg);"></div>
+    <div class="book-info">
+      <h3>Journey of Souls</h3>
+      <p>Author: Michael Newton</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Death 1" data-price="99.9">
+    <div class="book-image" style="background-image: url(/books/death1.jpg);"></div>
+    <div class="book-info">
+      <h3>All The Living And The Dead</h3>
+      <p>Author: Hayley Campbell</p>
+      <p>Price: $99.9</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Death 2" data-price="80">
+    <div class="book-image" style="background-image: url(/books/death2.jpg);"></div>
+    <div class="book-info">
+      <h3>When Breath Comes Air</h3>
+      <p>Author: Paul Kalanithi</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book-item" data-title="Death 3" data-price="80">
+    <div class="book-image" style="background-image: url(/books/death3.jpg);"></div>
+    <div class="book-info">
+      <h3>Things I've Learn From Dying</h3>
+      <p>Author: David R. Dow</p>
+      <p>Price: $80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>                  
+    </section>
+
+
+<section id="new-arrival" data-aos="fade-up">
+            <h2>New Arrival</h2>
+      <div class="book-grid">
+        <div class="book-item" data-title="Book Title 1" data-price="99.9">
+          <div class="book-image" style="background-image: url(/books/new1.jpg);"></div>
+          <div class="book-info">
+            <h3>The Denial of Death</h3>
+            <p>Author: Ernest Becker</p>
+            <p>Price: $99.9</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="book-item" data-title="Book Title 2" data-price="80">
+          <div class="book-image" style="background-image: url(/books/new2.jpg);"></div>
+          <div class="book-info">
+            <h3>On Death and Dying</h3>
+            <p>Author: Elizabeth Kiibler-Ross</p>
+            <p>Price: $80</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="book-item" data-title="Book Title 3" data-price="80">
+          <div class="book-image" style="background-image: url(/books/new3.jpg);"></div>
+          <div class="book-info">
+            <h3>The Good Death</h3>
+            <p>Author: Ann Neumann</p>
+            <p>Price: $80</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="book-item" data-title="Soul 1" data-price="99.9">
+          <div class="book-image" style="background-image: url(/books/new4.jpg);"></div>
+          <div class="book-info">
+            <h3>Love Your Life</h3>
+            <p>Author: Victoria Osteen</p>
+            <p>Price: $99.9</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="book-item" data-title="Soul 2" data-price="80">
+          <div class="book-image" style="background-image: url(/books/new5.jpg);"></div>
+          <div class="book-info">
+            <h3>The Meaning of Life</h3>
+            <p>Author: Nathanael Garret Novosel</p>
+            <p>Price: $80</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="book-item" data-title="Soul 3" data-price="80">
+          <div class="book-image" style="background-image: url(/books/new6.jpg);"></div>
+          <div class="book-info">
+            <h3>The Book of Life</h3>
+            <p>Author: Deborah Harkness</p>
+            <p>Price: $80</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+    <input type="hidden" name="subject" value="Contact Form Submission" />
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="user_name" required autocomplete="name" />
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="user_email" required autocomplete="email" />
+    <label for="message">Message *</label>
+    <textarea id="message" name="user_message" rows="6" required></textarea>
+    <button type="submit" onclick="sendMail()">Send Message</button>
+    <div class="form-message" id="form-message"></div>
+</form>
+</section>
+
+<div class="footer">
+    <p>&copy; 2025 D'Source Bookstore. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+
+</div>
+</header>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+                  AOS.init();
+        </script>
+
+<div id="cart-modal" class="modal">
+        <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Cart</h2>
+        
+
+
+</div>
+</div>
+
+    <script src="/js/cart.js" defer></script>
+    <script src="/js/form.js" defer></script>
+    <script src="/js/login.js" defer></script>
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/search.js"></script>
+    
+</body>
+</html>
