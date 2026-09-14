@@ -1,4 +1,4 @@
-# 📚 D'Source Bookstore Website
+# 📚 D'Source Bookstore Websitee
 
 Welcome to the **D'Source Bookstore** project — a responsive e-commerce bookstore website with a simple login interface, a homepage featuring books, and interactive features like a cart and animated sections.
 
