@@ -7,7 +7,7 @@ Welcome to the **D'Source Bookstore** project — a responsive e-commerce bookst
 - 🔐 **Login Page**
   - Form with username and password fields
   - "Remember Me" checkbox
-  - Redirects to the homepage (`home.html`) after login
+  - Redirects to the homepage (`home.html`) after loginn
   - Includes font icons and animations
 
 - 🏠 **Home Page**
